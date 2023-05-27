@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/view_holder_track_list_padding">
+
+    <com.example.core.presentation.view.RoundCornerImageView
+        android:id="@+id/image_view_track"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/view_holder_track_list_padding"
+        android:layout_marginEnd="@dimen/view_holder_track_list_padding"
+        android:layout_marginBottom="@dimen/view_holder_track_list_padding"
+        android:background="@color/colorError"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="CENTER_CROP" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_title"
+        style="@style/style_view_holder_track_list_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_holder_track_list_text_margin_vertical"
+        android:layout_marginEnd="@dimen/view_holder_track_list_padding"
+        app:layout_constraintEnd_toStartOf="@+id/image_view_track"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_view_track"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_artist_name"
+        style="@style/style_view_holder_track_list_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/view_holder_track_list_padding"
+        android:layout_marginBottom="@dimen/view_holder_track_list_text_margin_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_track"
+        app:layout_constraintEnd_toStartOf="@+id/image_view_track"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Artist Name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

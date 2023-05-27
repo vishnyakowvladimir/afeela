@@ -1,0 +1,142 @@
+ext {
+    compiler = [
+            java          : JavaVersion.VERSION_1_8,
+            kotlin_version: '1.8.0'
+    ]
+
+    android = [
+            buildTools: '27.0.3',
+            minSdk    : 24,
+            targetSdk : 33,
+            compileSdk: 33
+    ]
+
+    application = [
+            id                       : 'testapp.vishnyakovvladimir.ru.afeela',
+            versionCode              : 1,
+            testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    appDependencies = [
+            "org.jetbrains.kotlin:kotlin-stdlib:$compiler.kotlin_version",
+            "org.jetbrains.kotlin:kotlin-reflect:$compiler.kotlin_version",
+            'androidx.appcompat:appcompat:1.6.1',
+            'androidx.core:core-ktx:1.10.1',
+            'androidx.constraintlayout:constraintlayout:2.1.4',
+            'androidx.legacy:legacy-support-v4:1.0.0',
+            'androidx.fragment:fragment-ktx:1.3.0',
+            'com.google.android.material:material:1.9.0'
+    ]
+
+    archCoreVersion = '2.1.0'
+    archCoreTest = [
+            "androidx.arch.core:core-testing:$archCoreVersion"
+    ]
+
+    multidex = [
+            "com.android.support:multidex:1.0.3"
+    ]
+
+    stetho = [
+            "com.facebook.stetho:stetho:1.5.0"
+    ]
+
+    glide = [
+            'com.github.bumptech.glide:glide:4.14.2',
+            'jp.wasabeef:glide-transformations:4.3.0'
+    ]
+
+    picasso = [
+            'com.squareup.picasso:picasso:2.71828',
+            'jp.wasabeef:picasso-transformations:2.1.0'
+    ]
+
+    eventBus = [
+            'org.greenrobot:eventbus:3.2.0'
+    ]
+
+    cicerone = [
+            "com.github.terrakok:cicerone:7.1"
+    ]
+
+    lifecycleVersion = '2.6.1'
+    lifecycleDependencies = [
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-extensions:2.2.0",
+            "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-process:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-service:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
+            "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycleVersion"
+    ]
+
+    daggerVersion = '2.27'
+    dagger = [
+            "com.google.dagger:dagger:2.44.2",
+            "com.google.dagger:dagger-android:$daggerVersion",
+            "com.google.dagger:dagger-android-support:$daggerVersion"
+    ]
+
+    daggerKapt = [
+            "com.google.dagger:dagger-compiler:2.44.2",
+            "com.google.dagger:dagger-android-processor:$daggerVersion"
+    ]
+
+    okHttpVersion = '4.9.1'
+    retrofitVersion = '2.9.0'
+    network = [
+            "com.squareup.okhttp3:logging-interceptor:4.10.0",
+            "com.squareup.okhttp3:mockwebserver:$okHttpVersion",
+            "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+            "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    ]
+
+    rxVersion = '2.1.1'
+    rxBindingVersion = '3.1.0'
+    rx = [
+            "io.reactivex.rxjava2:rxandroid:$rxVersion",
+            "io.reactivex.rxjava2:rxjava:$rxVersion",
+            "io.reactivex.rxjava2:rxkotlin:2.4.0",
+            "com.jakewharton.rxbinding3:rxbinding:$rxBindingVersion",
+            "com.jakewharton.rxbinding3:rxbinding:$rxBindingVersion"
+    ]
+
+    moshi = [
+            "com.squareup.moshi:moshi-kotlin:1.9.2",
+            "com.serjltt.moshi:moshi-lazy-adapters:2.1"
+    ]
+
+    gson = [
+            "com.squareup.retrofit2:converter-gson:2.9.0",
+            "com.google.code.gson:gson:2.10.1"
+    ]
+
+    lottie = [
+            "com.airbnb.android:lottie:4.1.0"
+    ]
+
+    mockKVersion = '1.10.5'
+    mockKTest = [
+            "io.mockk:mockk:$mockKVersion"
+    ]
+
+    kluentVersion = '1.65'
+    kluentTest = [
+            "org.amshove.kluent:kluent:$kluentVersion"
+    ]
+
+    jUnitJupiterVersion = '5.7.1'
+    jUnitJupiterTest = [
+            "org.junit.jupiter:junit-jupiter-api:$jUnitJupiterVersion"
+    ]
+
+    jUnitVersion = '4.13.1'
+    jUnitTest = [
+            "junit:junit:$jUnitVersion"
+    ]
+}

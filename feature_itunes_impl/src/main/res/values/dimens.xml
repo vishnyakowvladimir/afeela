@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_holder_track_list_padding">12dp</dimen>
+    <dimen name="view_holder_track_list_text_margin_vertical">8dp</dimen>
+    <dimen name="track_details_margin">24dp</dimen>
+</resources>

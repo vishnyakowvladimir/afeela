@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="src" format="reference" />
+    <attr name="srcHint" format="reference" />
+    <attr name="scaleType" format="enum">
+        <enum name="MATRIX" value="0" />
+        <enum name="FIT_XY" value="1" />
+        <enum name="FIT_START" value="2" />
+        <enum name="FIT_CENTER" value="3" />
+        <enum name="FIT_END" value="4" />
+        <enum name="CENTER" value="5" />
+        <enum name="CENTER_CROP" value="6" />
+        <enum name="CENTER_INSIDE" value="7" />
+    </attr>
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="src" />
+        <attr name="srcHint" />
+        <attr name="scaleType" />
+    </declare-styleable>
+</resources>

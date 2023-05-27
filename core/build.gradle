@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.core'
+    def ext = rootProject.extensions.ext
+
+    compileSdkVersion ext.android.compileSdk
+
+    compileOptions {
+        sourceCompatibility ext.compiler.java
+        targetCompatibility ext.compiler.java
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = ext.compiler.java
+    }
+
+    defaultConfig {
+        minSdkVersion ext.android.minSdk
+        targetSdkVersion ext.android.targetSdk
+        versionCode ext.application.versionCode
+        versionName "1.0" + "(" + versionCode + ")"
+        multiDexEnabled true
+        flavorDimensions "default"
+        setProperty("archivesBaseName", "abil-$versionName")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'Float', 'MAX_WIDTH_AND_HEIGHT_SIZE', "1500.0f"
+            buildConfigField 'Integer', 'STORED_IMAGE_QUALITY', "90"
+            buildConfigField 'String', 'SUPPORT_EMAIL', "\"google@gmail.com\""
+            buildConfigField 'String', 'SUPPORT_MESSAGE_SUBJECT', "\"Ваш заголовок\""
+            buildConfigField 'String', 'SUPPORT_MESSAGE_TEXT', "\"Ваше сообщение\""
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'Float', 'MAX_WIDTH_AND_HEIGHT_SIZE', "1500.0f"
+            buildConfigField 'Integer', 'STORED_IMAGE_QUALITY', "90"
+            buildConfigField 'String', 'SUPPORT_EMAIL', "\"google@gmail.com\""
+            buildConfigField 'String', 'SUPPORT_MESSAGE_SUBJECT', "\"Ваш заголовок\""
+            buildConfigField 'String', 'SUPPORT_MESSAGE_TEXT', "\"Ваше сообщение\""
+        }
+    }
+
+    productFlavors {
+        developer {
+            buildConfigField 'String', 'API_URL', "\"https://itunes.apple.com/\""
+            buildConfigField 'String', 'WSURI', "\"ws://92.243.69.82:8100\""
+            buildConfigField 'String', 'TOPIC_GLOBAL', "\"commonTopic\""
+        }
+        production {
+            buildConfigField 'String', 'API_URL', "\"https://itunes.apple.com//\""
+            buildConfigField 'String', 'WSURI', "\"ws://92.243.69.82:8100\""
+            buildConfigField 'String', 'TOPIC_GLOBAL', "\"commonTopic\""
+        }
+    }
+}
+
+dependencies {
+    implementation appDependencies
+    implementation cicerone
+    implementation multidex
+    implementation stetho
+    implementation network
+    implementation moshi
+    implementation lottie
+    implementation glide
+    implementation dagger
+    kapt daggerKapt
+}

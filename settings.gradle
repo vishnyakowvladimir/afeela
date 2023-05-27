@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Afeela"
+include ':app'
+include ':resources'
+include ':core'
+include ':feature_itunes_impl'
+include ':feature_itunes_api'
+include ':domain_models'
+include ':data_source_api'
+include ':data_source_impl'
+include ':data_sdk_api'
+include ':data_sdk_impl'

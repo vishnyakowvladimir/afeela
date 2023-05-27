@@ -1,0 +1,127 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="editTextStyle">@style/AppStyleEditText</item>
+        <item name="buttonStyle">@style/AppStyleButton</item>
+        <item name="android:textViewStyle">@style/AppStyleTextView</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:dropDownListViewStyle">@style/popup</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--Toolbar style-->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+        <item name="colorAccent">@android:color/holo_blue_bright</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@android:color/holo_red_light</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="actionOverflowButtonStyle">@style/ActionButtonOverflow</item>
+        <item name="android:itemTextAppearance">@style/OptionsMenu</item>
+    </style>
+
+
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="ActionButtonOverflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_options_menu</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:contentDescription">"Lala"</item>
+    </style>
+
+    <style name="OptionsMenu" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorDarkGrey</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- popup list style-->
+    <style name="popup" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/colorDivider</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <!--EditText style-->
+    <style name="AppStyleEditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/background_edit_text</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <!--TextView style-->
+    <style name="AppStyleTextView" parent="@style/Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <!--Button style-->
+    <style name="AppStyleButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/background_button</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Picker" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/colorWhite</item>
+    </style>
+
+    <style name="TextView_13sp_regular">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextView_15sp_regular">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextView_15sp_bold">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="TextView_15sp_regular_accent">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextView_17sp_bold">
+        <item name="android:textSize">17sp</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="TextView_13sp_regular_red">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorError</item>
+    </style>
+
+    <style name="TextView_13sp_regular_light_grey">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorMiddleGrey</item>
+    </style>
+
+</resources>
